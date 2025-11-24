@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Proposal for Myhafizaaa 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <style>
   /* General Reset */
   * {
@@ -11,7 +12,7 @@
   }
   body {
     margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Fredoka One', 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
     color: #4a148c;
     min-height: 100vh;
@@ -32,22 +33,38 @@
     position: relative;
   }
 
-  /* Hearts animation background */
+  /* Enhanced Hearts animation background */
   body::before {
-    content: "❤️💕💕❤️💖💞";
+    content: "❤️💕💕❤️💖💞💘💓";
     position: fixed;
     top: 10%;
     left: -10%;
+    font-size: 60px;
+    color: rgba(255, 105, 180, 0.3);
+    animation: heartFloat 20s linear infinite;
+    user-select: none;
+    pointer-events: none;
+  }
+  body::after {
+    content: "💕💖💘💓❤️💕";
+    position: fixed;
+    bottom: 10%;
+    right: -10%;
     font-size: 50px;
-    color: rgba(255, 105, 180, 0.2);
-    animation: heartFloat 15s linear infinite;
+    color: rgba(255, 192, 203, 0.2);
+    animation: heartFloatReverse 25s linear infinite;
     user-select: none;
     pointer-events: none;
   }
   @keyframes heartFloat {
     0% { transform: translateX(0) translateY(0) rotate(0deg); }
-    50% { transform: translateX(110vw) translateY(-50vh) rotate(180deg);}
+    50% { transform: translateX(120vw) translateY(-60vh) rotate(180deg);}
     100% { transform: translateX(0) translateY(0) rotate(360deg);}
+  }
+  @keyframes heartFloatReverse {
+    0% { transform: translateX(0) translateY(0) rotate(360deg); }
+    50% { transform: translateX(-120vw) translateY(60vh) rotate(180deg);}
+    100% { transform: translateX(0) translateY(0) rotate(0deg);}
   }
 
   /* Titles and text */
@@ -58,6 +75,7 @@
     letter-spacing: 1.5px;
     margin-bottom: 20px;
     text-shadow: 2px 2px 3px rgba(255, 192, 203, 0.6);
+    animation: pulse 3s ease-in-out infinite;
   }
   p {
     font-size: 1.15rem;
@@ -74,7 +92,7 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    background-color: rgba(139, 0, 54, 0.85);
+    background-color: rgba(139, 0, 54, 0.9);
     z-index: 9999;
     animation: fadeIn 0.7s ease forwards;
   }
@@ -153,6 +171,7 @@
     margin-bottom: 20px;
     color: #880e4f;
     text-shadow: 1px 1px 3px #f48fb1;
+    animation: pulse 4s ease-in-out infinite;
   }
   .screen p {
     max-width: 500px;
@@ -179,6 +198,7 @@
     border-radius: 40px;
     box-shadow: 0 4px 15px #f06292aa;
     user-select: text;
+    animation: pulse 5s ease-in-out infinite;
   }
   .final-link:hover, .final-link:focus {
     background-color: #d81b60;
@@ -203,11 +223,18 @@
     border: none;
     box-shadow: 0 5px 20px rgba(216, 27, 96, 0.6);
     transition: 0.3s ease background-color, 0.3s ease box-shadow;
+    animation: pulse 3.5s ease-in-out infinite;
   }
   .continue-button:hover, .continue-button:focus {
     background-color: #880e4f;
     box-shadow: 0 7px 25px rgba(136, 14, 79, 0.8);
     outline: none;
+  }
+
+  /* Pulse animation for romantic effect */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
   }
 
   /* Smaller devices */
@@ -235,7 +262,11 @@
 
 <div id="proposalModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="proposalTitle" aria-describedby="proposalText">
   <div class="modal-content">
-    <h1 id="proposalTitle">❤️ A Special Proposal For Myhafizaaa ❤️</h1>
+    <h1 id="proposalTitle">
+      <span aria-hidden="true" style="font-size:28px;">❤️</span><br/>
+      A Special Proposal For Myhafizaaa<br/>
+      <span aria-hidden="true" style="font-size:28px;">❤️</span>
+    </h1>
     <p id="proposalText">Maybe this is not the best date you've ever had but i'll try to make it the best date you ever had sayangg ✨☄️✨</p>
     <button class="continue continue-button" onclick="acceptProposal()" aria-label="Accept Proposal and Continue">Continue</button>
     <button class="cancel continue-button" onclick="rejectProposal()" aria-label="Decline Proposal">Cancel</button>
@@ -268,8 +299,9 @@
   <section id="finalScreen" class="screen hidden" tabindex="-1" aria-label="Inquiries">
     <h1 style="color:#e91e63;">For more inquiries you can contact me</h1>
     <p style="font-size:18px;">
-      Kita negara yang demokrasi dan merdeka pada 31.8.1957 jadi dengan ini tiada paksaan untuk anda selaku pujaan hati saya untuk membantah atau menyuarakan pendapat <span role="img" aria-label="smiling face">🙂</span>.
+      Kita negara yang demokrasi dan merdeka pada 31.8.1957 jadi dengan ini tiada paksaan untuk anda selaku pujaan hati saya untuk membantah atau menyuarakan pendapat <span role="img" aria-label="love emoji">❤️</span>.
     </p>
+    <p style="font-size:16px; font-style:italic; color:#880e4f;">"Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day." 💕</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScYmkaCaSKYf1QokE3CtwUwhZ9g2nc97CsHQQ-Dj61HdG8djA/viewform?usp=header" 
        target="_blank" rel="noopener" class="final-link" aria-label="Google Form for inquiries">
       Click here to access the inquiry form
@@ -277,15 +309,6 @@
   </section>
 
 </div>
-
-<!-- Invisible YouTube audio player -->
-<iframe 
-  src="https://www.youtube.com/embed/mfCjKKaOgLE?autoplay=1&mute=0&loop=1&playlist=mfCjKKaOgLE" 
-  frameborder="0" 
-  allow="autoplay; encrypted-media" 
-  style="display:none;" 
-  allowfullscreen>
-</iframe>
 
 <script>
   function acceptProposal() {
